@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme d'Entraide Étudiante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Plateforme d'Entraide Étudiante</h1>
+    </header>
+    <main>
+        <!-- Section de connexion (visible si déconnecté) -->
+        <section id="auth">
+            <h2>Connexion</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Mot de passe">
+            <button id="signup">S'inscrire</button>
+            <button id="signin">Se connecter</button>
+            <p id="error-message" class="error"></p>
+        </section>
+
+        <!-- Section des images (visible si connecté) -->
+        <section id="image-section" class="hidden">
+            <h2>Images Éducatives</h2>
+            <div id="images"></div>
+            <button id="logout">Se déconnecter</button>
+        </section>
+
+        <!-- Section pour poster des questions (visible si connecté) -->
+        <section id="post-section" class="hidden">
+            <h2>Poster une question</h2>
+            <textarea id="question" placeholder="Écrivez votre question ici"></textarea>
+            <button id="post-question">Poster</button>
+        </section>
+    </main>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
